@@ -1,0 +1,20 @@
+<h2>Área de Tarefas</h2>
+<div>
+<h3>Adicionar uma tarefa</h3>
+<input type="text" value="Tarefa" [(ngModel)]="tarefa" /> <br><br>
+<button (click)="createTask()">Adicionar tarefa</button>
+</div>
+<div>
+  <h3>Lista de tarefas</h3>
+  <table border="1">
+    <tr>
+      <th>Tarefas</th>
+      <th>Botões</th>
+    </tr>
+    <tr *ngFor="let task of lista; index as i">
+      <td>{{ task }}</td>
+      <td><button (click)="deleteTask(i)">Deletar Tarefa</button></td>
+    </tr>
+  </table>
+</div>
+
